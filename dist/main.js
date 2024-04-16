@@ -4164,7 +4164,7 @@ const userAgent = `octokit-endpoint.js/${VERSION} ${distNode.getUserAgent()}`; /
 
 const DEFAULTS = {
   method: "GET",
-  baseUrl: "https://api.github.com",
+  baseUrl: "https://github.imec.be/api/v3",
   headers: {
     accept: "application/vnd.github.v3+json",
     "user-agent": userAgent
@@ -23099,7 +23099,7 @@ const MAX_COMMENT_CHARS = 65536;
 async function main$1() {
 	const token = core$1.getInput("github-token");
 	const githubClient = new github_2(token);
-	const workingDir = core$1.getInput('working-directory') || './';	
+	const workingDir = core$1.getInput('working-directory') || './';
 	const lcovFile = path.join(workingDir, core$1.getInput("lcov-file") || "./coverage/lcov.info");
 	const baseFile = core$1.getInput("lcov-base");
 	const shouldFilterChangedFiles =
